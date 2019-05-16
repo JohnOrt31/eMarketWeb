@@ -2,12 +2,14 @@ import React, { Component } from 'react'
 import Product from './Product';
 import Title from './Title';
 import {ProductConsumer} from '../context';
+import ControlledCarousel from './Carousel';
 
 export default class ProductList extends Component {
     render() {
         return (
         <React.Fragment>
             <div className = "py-5">
+            <ControlledCarousel></ControlledCarousel>
                <div className = "container" >
                     <Title name = "Nuestros" title = "productos" />
                     <div className = "row">

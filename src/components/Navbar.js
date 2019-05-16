@@ -10,6 +10,7 @@ export default class Navbar extends Component {
         <Link to={'/'}>
             <img src =  "/img/icon.png " alt = "store" className = "navbar-brand" height="69px"/>
         </Link>
+        
         <ul className = "navbar-nav align-items-center">
             <li className = "nav-item ml-5">
                 <Link to = "/" className = "nav-link text-success">Productos</Link>
