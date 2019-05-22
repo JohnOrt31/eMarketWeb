@@ -12,3 +12,11 @@ var connection = mysql.createConnection({
 
   
 
+ router.get('/', function(req, res, next){
+   var cliente = {
+     nombre: "",
+     correo: "",
+     
+   }
+
+ });

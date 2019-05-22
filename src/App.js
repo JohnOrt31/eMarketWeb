@@ -7,6 +7,7 @@ import ProductList from './components/ProductList';
 import Details from './components/Details';
 import Cart from './components/Cart';
 import Default from './components/Default';
+import AddProduct from './components/addProduct';
 
 
 class App extends Component {
@@ -18,6 +19,7 @@ class App extends Component {
                     <Route exact path = "/" component = {ProductList}></Route>
                     <Route path = "/details" component = {Details}></Route>
                     <Route path = "/CART" component = {Cart}></Route>
+                    <Route path = "/addProduct" component = {AddProduct}></Route>
                     <Route ccomponent = {Default}></Route>
                 </Switch>
             </React.Fragment>
