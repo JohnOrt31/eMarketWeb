@@ -16,6 +16,7 @@ export default class Router extends Component {
             <Switch>
               <Route exact path="/" component={Home} />
               <Route exact path="/carrito" component={Carrito}/>
+              
               <Route component={Error} />
             </Switch> 
           </BrowserRouter>
