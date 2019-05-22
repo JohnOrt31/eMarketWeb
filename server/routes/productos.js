@@ -1,5 +1,6 @@
 var express = require('express');
 var router = express.Router();
+const multer = require('multer');
 
 var connection = mysql.createConnection({
     host: 'localhost',
@@ -42,3 +43,50 @@ router.get('/', function(req, res, next){
         res.json(productos);
     });
 });
+
+// Almacenar imagen en carpeta y renombrar
+
+var id = 1;
+
+var storage = multer.diskStorage({
+    destination: function (req, file, cb) {
+    cb(null, 'productoImages')
+    },
+    filename: function (req, file, cb) {
+    cb(null, file.fieldname + '-' + id)
+    }
+})
+
+var upload = multer({ storage: storage })
+
+router.post('/addProduct',upload.single('imagen'), function(req, res, next){
+    // Falta obtener el nombre del proveedor
+
+    var producto = {
+
+    }
+    query = "INSERT INTO PRODUCTO()";
+    connection.query(query, function(err){
+        if(err){
+            console.log(err)
+        }else{
+            console.log("Producto insertado...")
+        }
+    })
+
+    //server.js
+ 
+ 
+    
+});
+
+app.post('/uploadfile', upload.single('myFile'), (req, res, next) => {
+    const file = req.file
+    if (!file) {
+      const error = new Error('Please upload a file')
+      error.httpStatusCode = 400
+      return next(error)
+    }
+      res.send(file)
+    
+  })
